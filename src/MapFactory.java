@@ -70,7 +70,7 @@ public class MapFactory {
 		}
 	}
 	/**
-	 * Clase que muestra en una coleccion las cartas
+	 * Metodo que muestra en una coleccion las cartas
 	 * @return cartas
 	 */
 	public Cartas[] cartasEnColeccion() {

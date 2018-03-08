@@ -51,6 +51,7 @@ public class Main {
 			maps.Escoger(Cartatipo);
 			System.out.println("Ingrese el nombre de la carta que desea agregar: ");
 			String nombre = teclado.nextLine();
+			maps.cartasEnArray();
 			
 		}
 	}
