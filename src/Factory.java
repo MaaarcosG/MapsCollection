@@ -17,15 +17,15 @@ public class Factory {
 	 * @param tipo, es el tipo de coleccion que el usuario escoga
 	 * @return Devuelve un set, que es llenando cada uno de los Map
 	 */
-	public static <K,V> AbstractMap<K,V> getMap(String tipo){
+	public static <K,V> AbstractMap<K,V> getMap(String Cartatipo){
 		/*Condicion que sirve para saber que tipo de Map, que el usuario escoga*/
-		if(tipo.equalsIgnoreCase("HashMap")) { //Si es igual a HashMap
+		if(Cartatipo.equalsIgnoreCase("HashMap")) { //Si es igual a HashMap
 			return new HashMap<K,V>();
 			
-		} else if(tipo.equalsIgnoreCase("TreeMap")) { //Si es igual a TreeSet
+		} else if(Cartatipo.equalsIgnoreCase("TreeMap")) { //Si es igual a TreeSet
 			return new TreeMap<K,V>();
 			
-		} else if (tipo.equalsIgnoreCase("LinkedMap")) { //Si es igual a LinkedMap
+		} else if (Cartatipo.equalsIgnoreCase("LinkedMap")) { //Si es igual a LinkedMap
 			return new LinkedHashMap<K,V>();
 		}
 		return null;

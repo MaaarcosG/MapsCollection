@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		String datos = "";
+		MapFactory maps = new MapFactory();
 		/*Abrimos el Archivo*/
 		try {
 			/*Abrimos el archivo de texto*/
@@ -24,7 +25,7 @@ public class Main {
 			
 			/*Condicion para verificar si esta lleno o no*/
 			if ((datos=buffer.readLine()) != null) {
-				System.out.println(datos.replace(" ", " "));
+				System.out.println("Archivo abierto correctamente");
 			}
 			else {
 				/*Si esta vacio se manda el mensaje*/
@@ -37,19 +38,20 @@ public class Main {
 			/*Mensaje de error*/
 			System.err.println("Ocurrio un error " + e.getMessage());
 		}
+		
 		Scanner teclado = new Scanner(System.in);
 		/*String tipo = ""; */
 		System.out.println("1. HashMap \n2. TreeMap \n3. LinkedMap");
 		System.out.println("Escriba el tipo de Map que desea utilizar: ");
-		String tipo = teclado.nextLine();
+		String Cartatipo = teclado.nextLine();
 		
 		/*Condicion para cada uno de los metodos*/
-		if(tipo.equals("HashMap")) {
-			System.out.println();
-			String nombreCarta;
+		if(Cartatipo.equals("HashMap")) {
+			System.out.println("-----");
+			maps.Escoger(Cartatipo);
 			System.out.println("Ingrese el nombre de la carta que desea agregar: ");
-			nombreCarta = teclado.nextLine();
-			MapFactory.agregarCartasColeccion(nombreCarta);
+			String nombre = teclado.nextLine();
+			
 		}
 	}
 }

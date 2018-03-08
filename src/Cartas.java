@@ -7,11 +7,13 @@ public class Cartas {
 	/*Atributos de la clase*/
 	private String cartas;
 	private String coleccion;
+	private int  cantidad;
 	
 	/*Constructor de la clase*/
-	public Cartas(String cartas, String coleccion) {
+	public Cartas(String cartas, String coleccion, int cantidad) {
 		this.setCartas(cartas);
 		this.setColeccion(coleccion);
+		this.setCantidad(cantidad);
 	}
 
 	/**
@@ -40,6 +42,20 @@ public class Cartas {
 	 */
 	public void setColeccion(String coleccion) {
 		this.coleccion = coleccion;
+	}
+
+	/**
+	 * @return the cantidad
+	 */
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	/**
+	 * @param cantidad the cantidad to set
+	 */
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
 	}
 	
 	
