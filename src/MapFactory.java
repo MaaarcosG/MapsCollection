@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.AbstractMap;
+import java.util.Iterator;
+import java.util.Set;
 
 
 /**
@@ -28,6 +30,7 @@ public class MapFactory {
 	 * @param cartasColeccions, atributo que tiene los nombre de cada uno de los tipos de carta
 	 * @throws Exception, si no se logra hacer manda un error
 	 */
+	@SuppressWarnings("null")
 	public void agregarCartas(String cartasColeccions) throws Exception {
 		/*Leemos el archivo de texto*/
 		try {
@@ -69,24 +72,18 @@ public class MapFactory {
 			coleccionCartas.put(cartasMap.get(nombre).getCartas(), cartasMap.get(nombre));
 		}
 	}
+
 	/**
-	 * Metodo que muestra en una coleccion las cartas
-	 * @return cartas
+	 * @param nombre
+	 * @return devuelve el nombre de la carta que este en la coleccion
 	 */
-	public Cartas[] cartasEnColeccion() {
-		Cartas[] cartas = new Cartas[coleccionCartas.size()];
-		coleccionCartas.values().toArray(cartas);
-		return cartas;
+	public Cartas buscarTipo(String nombre) {
+		if(cartasMap.containsKey(nombre)) {
+			return cartasMap.get(nombre);
+		}
+		throw new IllegalStateException("LA CARTA QUE DESEA ENCONTRAR NO ESTA");
 	}
-	/**
-	 * Clase que muestra las caras disponibles
-	 * @return cartas
-	 */
-	public Cartas[] cartasEnArray() {
-		Cartas[] cartas = new Cartas[cartasMap.size()];
-		cartasMap.values().toArray(cartas);
-		return cartas;
-	}
+	
 	
 }
 

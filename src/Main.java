@@ -81,9 +81,13 @@ public class Main {
 					+ "\nIngrese el número de la operación deseada");
 			String operacion = teclado.nextLine();
 			if (operacion.equals("1")) {
-				//System.out.println("Ingrese el nombre de la carta que desea agregar: ");
-				//String nombre = teclado.nextLine();
-				//maps.cartasEnArray();
+				System.out.println("Ingrese el nombre de la carta que desea agregar: ");
+				String nombre = teclado.nextLine();
+			} else if(operacion.equals("2")) {
+				System.out.println("Ingrese el nombre de la carta: ");
+				String nombre = teclado.nextLine();
+				
+				System.out.println(maps.buscarTipo(nombre));
 			}
 			System.out.println("¿Desea continuar? escriba si o no.");
 			String continuar = teclado.nextLine();
